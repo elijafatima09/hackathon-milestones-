@@ -16,25 +16,25 @@ const skills= (document.getElementById('skills')as HTMLInputElement).value
 const resumeHTML = `
 <h2><b>Editable Resume</b><h2>
 <h3>Personal Information</h3>
-<p><b>Name:</b><span contentediatbale="true">${name}</span></p>
-<p><b>email:</b><span contentediatbale="true">${email}</span></p>
-<p><b>phone:</b><span contentediatable="true">${phone}</span></p>
+<p><b>Name:</b>${name}</p>
+<p><b>email:</b>${email}</p>
+<p><b>phone:</b>${phone}</p>
 
 
 <h3>Education</h3>
-<p contentediatable="true">${education}</p>
+<p>${education}</p>
 
 <h3>Experience</h3>
-<p contentediatable="true">${experience}</p>
+<p>${experience}</p>
 
 <h3>Skills</h3>
-<p contentediatable="true">${skills}</p>
+<p>${skills}</p>
 `;
 
 
 //display the generated resume 
-if (ResumeDisplayElement){
-    ResumeDisplayElement.innerHTML =resumeHTML;
+if (resumeDisplayElement){
+    resumeDisplayElement.innerHTML =resumeHTML;
 }
 else {
     console.error('The resume display element is missing');
